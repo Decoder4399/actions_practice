@@ -1,46 +1,46 @@
-name: test-build-deploy
+# name: test-build-deploy
 
-on:
-  workflow_dispatch:
-    inputs:
-      environment: 
-        description: This is the environment value where this workflow runs.
-        required: true
-        type: choice
-        options:
-          - dev
-          - prod
-          - staging
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       environment: 
+#         description: This is the environment value where this workflow runs.
+#         required: true
+#         type: choice
+#         options:
+#           - dev
+#           - prod
+#           - staging
         
-jobs:
-  code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: this is a code pull
-        run: echo "code pulled"
+# jobs:
+#   code:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: this is a code pull
+#         run: echo "code pulled"
 
-  build:
-    runs-on: ubuntu-latest
-    needs: code
-    steps:
-      - name: this is a build
-        run: echo "code build done"
+#   build:
+#     runs-on: ubuntu-latest
+#     needs: code
+#     steps:
+#       - name: this is a build
+#         run: echo "code build done"
 
 
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: this is a test
-        run: echo "code test done"
+#   test:
+#     runs-on: ubuntu-latest
+#     needs: build
+#     steps:
+#       - name: this is a test
+#         run: echo "code test done"
 
-  deploy:
-    if: inputs.environment=='dev'
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: deploying code after test
-        run: echo "code deployed"
+#   deploy:
+#     if: inputs.environment=='dev'
+#     runs-on: ubuntu-latest
+#     needs: test
+#     steps:
+#       - name: deploying code after test
+#         run: echo "code deployed"
 
 
         
