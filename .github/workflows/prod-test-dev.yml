@@ -35,6 +35,7 @@ jobs:
         run: echo "code test done"
 
   deploy:
+    if: inputs.environment=='dev'
     runs-on: ubuntu-latest
     needs: test
     steps:
