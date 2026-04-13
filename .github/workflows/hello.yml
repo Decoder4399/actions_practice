@@ -5,9 +5,18 @@ on:
     branches: [main]
 
 jobs: 
-  job1:
+  checkfile: 
     runs-on: ubuntu-latest
+
     steps:
       - name: say hello to user
-        run: echo "Hello Ali, GitHub Actions working!"
-        
+        uses: actions/checkout@v4
+
+      - name: checkout code
+        run: |
+          if [ -f index.html ]; then
+            echo "index.html file is found in the repository"
+          else
+            echo "index.html file is not found in the repository"
+            exit 1
+          fi
