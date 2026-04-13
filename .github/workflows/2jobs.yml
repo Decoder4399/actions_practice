@@ -5,13 +5,13 @@ on:
 
 jobs:
     job1:
-        runs-on: ubuntu-lates
+        runs-on: ubuntu-latest
         steps:
             - name: "this is job to prnt Hello"
               run: echo "Hello"
 
     job2: 
-        runs-on: ubuntu-lates
+        runs-on: ubuntu-latest
         steps:
             - name: "this is job to prnt world"
               run: echo "World"
