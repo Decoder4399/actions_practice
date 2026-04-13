@@ -5,7 +5,7 @@ on:
     branches: [main]
 
   workflow_dispatch:
-    
+
 permissions:
   contents: read
   pages: write
@@ -26,9 +26,11 @@ jobs:
 # setup github pages using peaceiris action to deploy the code to github pages
             - name: setup github pages
               uses: actions/configure-pages@v4
-
+# upload the static files to github pages using peaceiris action to deploy the code to github pages
             - name: upload static files to github pages
               uses: actions/upload-pages-artifact@v4
+              with:
+                path: "."
             
 
             - name: deploy to github pages
