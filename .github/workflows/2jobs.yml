@@ -1,0 +1,17 @@
+name: 2jobs
+
+on: 
+    workflow_dispatch
+
+jobs:
+    job1:
+        runs-on: ubuntu-lates
+        steps:
+            - name: "this is job to prnt Hello"
+              run: echo "Hello"
+
+    job2: 
+        runs-on: ubuntu-lates
+        steps:
+            - name: "this is job to prnt world"
+              run: echo "World"
