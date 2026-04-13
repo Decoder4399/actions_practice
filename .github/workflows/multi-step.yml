@@ -9,11 +9,10 @@ jobs:
         steps: 
             - name: code checkout
               uses: actions/checkout@v4
-    
 
-    show-current-file: 
-        runs-on: ubuntu-latest
-        steps: 
             - name: show current files
               run: ls -a
+
+            - name: success Message 
+              run: echo pipeline executed successfully
             
