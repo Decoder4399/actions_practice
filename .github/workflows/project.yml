@@ -1,0 +1,30 @@
+name: Devops-CI-Pipe
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+
+            - name: install docker compose
+              run: sudo apt-get install docker.io docker compose
+
+            - name: build docker image
+              run: docker build -t portfolio-app .
+
+            - name: run container check
+              run: docker run -d -p 3000:3000 portfolio-app
+
+            - name: Success message
+              run: echo "CI pipeline passed"
+
+    
