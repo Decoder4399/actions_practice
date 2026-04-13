@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Ahmad Raza | DevOps & Automation</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        header {
+            padding: 20px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: #38bdf8;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: #020617;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .skills, .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #020617;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #1e293b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ali.dev</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Hi, I'm Ali 👋</h2>
+    <p>DevOps Enthusiast | Automation Learner | Docker & GitHub Actions Practitioner</p>
+    <button class="btn" onclick="scrollToSection('contact')">Contact Me</button>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I'm a passionate developer focused on DevOps, automation, and backend systems.
+        I love working with Docker, GitHub Actions, and building efficient workflows.
+        Currently practicing real-world scenarios like CI/CD pipelines, multi-stage builds,
+        and automation scripts.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="card">Docker</div>
+        <div class="card">GitHub Actions</div>
+        <div class="card">Node.js</div>
+        <div class="card">Python</div>
+        <div class="card">Java</div>
+        <div class="card">CI/CD</div>
+        <div class="card">Linux</div>
+        <div class="card">Automation</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Vendor Management System</h3>
+            <p>Role-based system with Firebase, inventory tracking, and dashboards.</p>
+        </div>
+
+        <div class="card">
+            <h3>Docker Multi-Stage Builder</h3>
+            <p>Optimized Dockerfiles for multiple tech stacks with smaller images.</p>
+        </div>
+
+        <div class="card">
+            <h3>GitHub Actions Workflows</h3>
+            <p>CI/CD pipelines with testing, build, and deployment automation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Roster Automation Script</h3>
+            <p>Python script to generate shift schedules using Excel input.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: github.com/yourprofile</p>
+</section>
+
+<footer>
+    <p>© 2026 Ali Ahmad Raza</p>
+</footer>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+</body>
+</html>
