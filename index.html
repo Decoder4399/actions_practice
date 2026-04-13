@@ -1,100 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Ahmad | DevOps & Automation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Ahmad Raza | DevOps Engineer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        body {
-            background: #0f172a;
-            color: #e2e8f0;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        header {
-            padding: 20px;
-            background: #020617;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
 
-        header h1 {
-            color: #38bdf8;
-        }
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav a {
-            color: #e2e8f0;
-            margin-left: 20px;
-            text-decoration: none;
-        }
+header h1 {
+    color: #38bdf8;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        .hero {
-            text-align: center;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
 
-        .hero h2 {
-            font-size: 40px;
-            color: #38bdf8;
-        }
+.hero h2 {
+    font-size: 50px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .hero p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.8;
+}
 
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #38bdf8;
-            color: #020617;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .skills, .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+.btn:hover {
+    transform: scale(1.05);
+}
 
-        .card {
-            background: #020617;
-            padding: 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-            background: #1e293b;
-        }
+h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-            margin-top: 40px;
-        }
-    </style>
+/* GLASS CARD */
+.card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
@@ -109,65 +148,69 @@
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero fade-in">
     <h2>Hi, I'm Ali 👋</h2>
-    <p>DevOps Enthusiast | Automation Learner | Docker & GitHub Actions Practitioner</p>
-    <button class="btn" onclick="scrollToSection('contact')">Contact Me</button>
+    <p>DevOps Engineer | Automation Enthusiast | Docker & CI/CD Specialist</p>
+    <button class="btn" onclick="scrollToSection('contact')">Let's Connect</button>
 </section>
 
-<section id="about">
+<section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>
-        I'm a passionate developer focused on DevOps, automation, and backend systems.
-        I love working with Docker, GitHub Actions, and building efficient workflows.
-        Currently practicing real-world scenarios like CI/CD pipelines, multi-stage builds,
-        and automation scripts.
-    </p>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="card">Docker</div>
-        <div class="card">GitHub Actions</div>
-        <div class="card">Node.js</div>
-        <div class="card">Python</div>
-        <div class="card">Java</div>
-        <div class="card">CI/CD</div>
-        <div class="card">Linux</div>
-        <div class="card">Automation</div>
+    <div class="card">
+        <p>
+            I am a DevOps-focused developer passionate about automation, CI/CD pipelines,
+            and scalable system design. I specialize in Docker, GitHub Actions, and
+            workflow optimization. I enjoy building real-world systems like vendor
+            management platforms and automation scripts that solve operational problems.
+        </p>
     </div>
 </section>
 
-<section id="projects">
+<section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">Docker</div>
+        <div class="card">GitHub Actions</div>
+        <div class="card">CI/CD Pipelines</div>
+        <div class="card">Node.js</div>
+        <div class="card">Python</div>
+        <div class="card">Java</div>
+        <div class="card">Linux</div>
+        <div class="card">Automation Scripts</div>
+    </div>
+</section>
+
+<section id="projects" class="fade-in">
     <h2>Projects</h2>
-    <div class="projects">
+    <div class="grid">
         <div class="card">
             <h3>Vendor Management System</h3>
-            <p>Role-based system with Firebase, inventory tracking, and dashboards.</p>
+            <p>Role-based system with Firebase, dashboards, and inventory tracking.</p>
         </div>
 
         <div class="card">
             <h3>Docker Multi-Stage Builder</h3>
-            <p>Optimized Dockerfiles for multiple tech stacks with smaller images.</p>
+            <p>Optimized Dockerfiles for multiple tech stacks.</p>
         </div>
 
         <div class="card">
-            <h3>GitHub Actions Workflows</h3>
-            <p>CI/CD pipelines with testing, build, and deployment automation.</p>
+            <h3>GitHub Actions CI/CD</h3>
+            <p>Automated pipelines for build, test, and deployment.</p>
         </div>
 
         <div class="card">
-            <h3>Roster Automation Script</h3>
-            <p>Python script to generate shift schedules using Excel input.</p>
+            <h3>Roster Automation</h3>
+            <p>Python script generating shift schedules from Excel data.</p>
         </div>
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p>GitHub: github.com/yourprofile</p>
+    <div class="card">
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: github.com/yourprofile</p>
+    </div>
 </section>
 
 <footer>
@@ -175,9 +218,20 @@
 </footer>
 
 <script>
-    function scrollToSection(id) {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    }
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+/* Fade-in animation */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 </script>
 
 </body>
