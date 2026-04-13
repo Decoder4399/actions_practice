@@ -1,0 +1,28 @@
+name: test-build-deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: this is a code pull
+        run: echo "code pulled"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: this is a test
+        run: echo "code test done"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploying code after test
+        run: echo "code deployed"
+
+
+        
+
+  
