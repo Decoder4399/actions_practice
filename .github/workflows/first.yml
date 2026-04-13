@@ -14,4 +14,11 @@ jobs:
       - name: say hello username
         run: echo "Hello $USER"
 
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check docker version
+        run: docker --version
+
       
