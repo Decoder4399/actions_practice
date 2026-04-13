@@ -1,0 +1,13 @@
+name: hello
+
+on:
+  push:
+    branches: [main]
+
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to user
+        run: echo "Hello Ali, GitHub Actions working!"
+        
