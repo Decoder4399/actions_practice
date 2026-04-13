@@ -12,14 +12,22 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    needs: [code]
+    needs: code
+    steps:
+      - name: this is a build
+        run: echo "code build done"
+
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: this is a test
         run: echo "code test done"
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [build,code]
+    needs: test
     steps:
       - name: deploying code after test
         run: echo "code deployed"
