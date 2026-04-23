@@ -13,6 +13,12 @@ jobs:
       - name: say hello to developer
         run: echo "hello Dev"
 
+  bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check docker version
+        run: docker --version
+
         
 
 
