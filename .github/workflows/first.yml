@@ -1,24 +1,27 @@
-name: Hello
+name: tmkc
 
 on:
   workflow_dispatch:
 
-
 jobs:
-  greet:
+  hello:
     runs-on: ubuntu-latest
     steps:
-      - name: say hello to user
-        run: echo "Hello Ali"
-  
-      - name: say hello username
-        run: echo "Hello $USER"
+      - name: say hello to me
+        run: echo "hello $USER"
 
+      - name: say hello to developer
+        run: echo "hello Dev"
 
-  details:
+  bye:
     runs-on: ubuntu-latest
+    needs: hello
     steps:
       - name: check docker version
         run: docker --version
+
+        
+
+
 
       

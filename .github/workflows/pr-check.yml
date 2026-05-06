@@ -1,16 +1,14 @@
-name: pr-check
+name: schedule-test
 
 on:
-    pull_request:
-        branches:
-            - main
-        types: [opened, synchronize]
+  schedule:
+    - cron: "0 * * * *"
 
 jobs:
-    pr-check:
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: print pr info
-              run: 'echo "PR check running for branch: ${{ github.head_ref }}"'
+    steps:
+      - name: Print message
+        run: echo "Scheduled workflow running"
 
